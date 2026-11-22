@@ -1,0 +1,4 @@
+node_modules/
+*.log
+.env
+jms-ssh-mcp.config.json

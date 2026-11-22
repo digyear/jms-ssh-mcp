@@ -1,0 +1,33 @@
+{
+  "//": "Optional. Only needed for several bastions; everything here also has a JMS_SSH_* environment variable, and env wins.",
+  "defaults": {
+    "menuPrompt": "Opt>\\s*$",
+    "listPrompt": "\\[(Host|Node|Asset|Account)\\]>\\s*$",
+    "shellPrompt": "[#$]\\s*$",
+    "enterKey": "cr",
+    "commandTimeoutMs": 30000,
+    "connectTimeoutMs": 20000,
+    "idleTimeoutMs": 0,
+    "keepaliveIntervalMs": 15000,
+    "reconnect": true,
+    "menuOptionMax": 11,
+    "maxSessions": 8,
+    "maxOutputBytes": 262144,
+    "maxResultBytes": 1048576,
+    "maxBufferChars": 4194304,
+    "auditLog": null,
+    "auditOutput": false,
+    "debug": false,
+    "allowAll": false
+  },
+  "bastions": {
+    "test": {
+      "host": "jumpserver.example.com",
+      "port": 2222,
+      "username": "alice",
+      "passwordEnv": "JMS_SSH_TEST_PASSWORD",
+      "otpSecretEnv": "JMS_SSH_TEST_OTP_SECRET",
+      "account": null
+    }
+  }
+}
